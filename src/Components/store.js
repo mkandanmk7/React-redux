@@ -7,6 +7,8 @@ const Dec = "dec";
 const Reset = "reset";
 
 const countReducer = (state = { count: 0 }, action) => {
+  console.log(state); //initailly state is undefined so its takes count:0 ;
+
   switch (action.type) {
     case Inc: {
       return { count: state.count + 1 };
