@@ -6,7 +6,7 @@ const Inc = "inc";
 const Dec = "dec";
 const Reset = "reset";
 
-const countReducer = (state, action) => {
+const countReducer = (state = { count: 0 }, action) => {
   switch (action.type) {
     case Inc: {
       return { count: state.count + 1 };
