@@ -8,6 +8,11 @@ export const Counter = () => {
   console.log(store.dispatch({ type: "inc" })); // 2
   console.log(store.dispatch({ type: "inc" })); // 3
   console.log(store.getState()); //  curretn state value : 3
+  console.log(store.dispatch({ type: "dec" })); // count dec = 2
+  console.log(store.dispatch({ type: "dec" })); // 1
+  console.log(store.getState()); // 1
+  console.log(store.dispatch({ type: "reset" })); // reset=0
+  console.log(store.getState()); // 0
 
   return (
     <div>

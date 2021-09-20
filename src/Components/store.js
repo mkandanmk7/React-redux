@@ -7,14 +7,14 @@ const Dec = "dec";
 const Reset = "reset";
 
 const countReducer = (state = { count: 0 }, action) => {
-  console.log(state); //initailly state is undefined so its takes count:0 ;
+  //   console.log(state); //initailly state is undefined so its takes count:0 ;
 
   switch (action.type) {
     case Inc: {
       return { count: state.count + 1 };
     }
     case Dec: {
-      return { count: state.count - 2 };
+      return { count: state.count - 1 };
     }
     case Reset: {
       return { count: 0 };
