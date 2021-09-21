@@ -32,7 +32,7 @@ const pop = "pop";
 
 const empty = "empty";
 
-const arrayReducer = (state = { number: [] }, action) => {
+const arrayReducer = (state = { number: [1] }, action) => {
   switch (action.type) {
     case push: {
       const numbers = [...state.number];
@@ -54,4 +54,6 @@ const arrayReducer = (state = { number: [] }, action) => {
   }
 };
 
-export const store = Redux.createStore(countReducer, arrayReducer);
+const rootReducer = Redux.combineReducers({ countReducer, arrayReducer });
+
+export const store = Redux.createStore(rootReducer);
