@@ -25,4 +25,33 @@ const countReducer = (state = { count: 0 }, action) => {
   }
 };
 
-export const store = Redux.createStore(countReducer);
+// Name array  actions:
+
+const push = "push";
+const pop = "pop";
+
+const empty = "empty";
+
+const arrayReducer = (state = { number: [] }, action) => {
+  switch (action.type) {
+    case push: {
+      const numbers = [...state.number];
+      numbers.push(Math.floor(Math.random()));
+      return { number: numbers };
+    }
+    case pop: {
+      const numbers = [...state.number];
+      numbers.pop();
+
+      return { number: numbers };
+    }
+    case empty: {
+      return { number: [] };
+    }
+    default: {
+      return state;
+    }
+  }
+};
+
+export const store = Redux.createStore(countReducer, arrayReducer);
