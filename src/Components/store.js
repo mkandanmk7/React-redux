@@ -54,6 +54,6 @@ const arrayReducer = (state = { number: [1] }, action) => {
   }
 };
 
-const rootReducer = Redux.combineReducers({ countReducer, arrayReducer });
+const rootReducer = Redux.combineReducers({ countReducer, arrayReducer }); //every components gets store state details ;
 
 export const store = Redux.createStore(rootReducer);
