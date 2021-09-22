@@ -12,7 +12,7 @@ function ReduxArray(props) {
       <button onClick={() => props.dispatch({ type: Empty })}>PUSH</button>
       <p>
         {props.number.map((num) => {
-          return <span key={num}>{num} ,</span>;
+          return <span key={num}>{num} , </span>;
         })}
       </p>
       {/* <ul>
