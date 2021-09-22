@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 // React-redux operations:
 
 function ReduxCounter(props) {
-  console.log(props.dispatch);
+  console.log(props);
   return (
     <div>
       <h3>React Counter Component !</h3>
@@ -14,8 +14,8 @@ function ReduxCounter(props) {
 
 // mapping state [ stored in  (store)] to ReduxCounter comp's props...
 const mapStateToProps = (state) => {
-  console.log(state);
-  return state;
+  //   console.log(state);
+  return { counter: state.countReducer.count };
 };
 
 // const mapDispatchToProps = () => {};
