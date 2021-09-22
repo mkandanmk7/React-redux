@@ -15,7 +15,7 @@ function ReduxCounter(props) {
 // mapping state [ stored in  (store)] to ReduxCounter comp's props...
 const mapStateToProps = (state) => {
   //   console.log(state);
-  return { counter: state.countReducer.count };
+  return state.countReducer;
 };
 
 // const mapDispatchToProps = () => {};
