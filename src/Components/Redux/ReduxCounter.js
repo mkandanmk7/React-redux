@@ -18,13 +18,21 @@ function ReduxCounter(props) {
 }
 
 // mapping state [ stored in  (store)] to ReduxCounter comp's props...
-const mapStateToProps = (state) => {
+const mapStateToProps = ({ countReducer }) => {
   //   console.log(state);
-  return state.countReducer;
+  return countReducer;
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    inc: () => dispatch({ type: Inc }),
+    dec: () => dispatch({ type: Dec }),
+    reset: () => dispatch({ type: Reset }),
+  };
 };
 
 // const mapDispatchToProps = () => {};
 
-export default connect(mapStateToProps)(ReduxCounter);
+export default connect(mapStateToProps, mapDispatchToProps)(ReduxCounter);
 
 //connect(two params functions) (mapStateToprops) (mapDispatchToProps)
