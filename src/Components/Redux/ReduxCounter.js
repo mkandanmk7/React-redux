@@ -10,9 +10,9 @@ function ReduxCounter(props) {
     <div>
       <h3>React Counter Component !</h3>
       <p>count: {props.count}</p>
-      <button onClick={() => props.dispatch({ type: Inc })}>Inc</button>
-      <button onClick={() => props.dispatch({ type: Dec })}>Dec</button>
-      <button onClick={() => props.dispatch({ type: Reset })}>Reset</button>
+      <button onClick={props.inc}>Inc</button>
+      <button onClick={props.dec}>Dec</button>
+      <button onClick={props.reset}>Reset</button>
     </div>
   );
 }
