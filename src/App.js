@@ -7,6 +7,8 @@ import { store } from "../src/Components/store";
 // import Name from "./Components/Name";
 // import store from "./Components/store";
 
+// default redux opertions:
+
 function App() {
   return (
     // wrapper

@@ -1,5 +1,7 @@
 import { store } from "./store";
 
+// default redux opertions:
+
 export default function Name() {
   console.log(store.getState());
 
