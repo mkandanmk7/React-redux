@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Dec, Inc, Reset } from "../store";
 
 // React-redux operations:
 
@@ -9,9 +10,9 @@ function ReduxCounter(props) {
     <div>
       <h3>React Counter Component !</h3>
       <p>count: {props.count}</p>
-      <button onClick={() => props.dispatch({ type: "inc" })}>Inc</button>
-      <button onClick={() => props.dispatch({ type: "dec" })}>Dec</button>
-      <button onClick={() => props.dispatch({ type: "reset" })}>Reset</button>
+      <button onClick={() => props.dispatch({ type: Inc })}>Inc</button>
+      <button onClick={() => props.dispatch({ type: Dec })}>Dec</button>
+      <button onClick={() => props.dispatch({ type: Reset })}>Reset</button>
     </div>
   );
 }

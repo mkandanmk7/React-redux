@@ -2,9 +2,9 @@ import * as Redux from "redux";
 
 //actions:
 
-const Inc = "inc";
-const Dec = "dec";
-const Reset = "reset";
+export const Inc = "inc";
+export const Dec = "dec";
+export const Reset = "reset";
 
 const countReducer = (state = { count: 0 }, action) => {
   //   console.log(state); //initailly state is undefined so its takes count:0 ;
@@ -27,26 +27,26 @@ const countReducer = (state = { count: 0 }, action) => {
 
 // Name array  actions:
 
-const push = "push";
-const pop = "pop";
+export const Push = "push";
+export const Pop = "pop";
 
-const empty = "empty";
+export const Empty = "empty";
 
 const arrayReducer = (state = { number: [1] }, action) => {
   switch (action.type) {
-    case push: {
+    case Push: {
       const numbers = [...state.number];
-      numbers.push(Math.floor(Math.random()));
+      numbers.push(Math.floor(Math.random() * 10));
       return { number: numbers };
     }
-    case pop: {
+    case Pop: {
       const numbers = [...state.number];
       numbers.pop();
 
       return { number: numbers };
     }
-    case empty: {
-      return { number: [] };
+    case Empty: {
+      return { number: [0] };
     }
     default: {
       return state;
